@@ -10,7 +10,7 @@ if version > 580
     syntax reset
   endif
 endif
-let g:colors_name="desertEx"
+let g:colors_name="desertEX"
 
 hi Normal       guifg=gray           guibg=grey17     gui=none
 
@@ -21,13 +21,13 @@ hi VertSplit    guifg=gray40         guibg=gray40     gui=none
 hi Folded       guifg=DarkSlateGray3 guibg=grey30     gui=none
 hi FoldColumn   guifg=tan            guibg=grey30     gui=none
 hi IncSearch    guifg=#b0ffff        guibg=#2050d0
-hi LineNr       guifg=burlywood3                      gui=none
+hi LineNr       guifg=#605958        guibg=NONE       gui=none
 hi ModeMsg      guifg=SkyBlue                         gui=none
 hi MoreMsg      guifg=SeaGreen                        gui=none
 hi NonText      guifg=cyan                            gui=none
 hi Question     guifg=springgreen                     gui=none
 hi Search       guifg=gray80         guibg=#445599    gui=none
-hi SpecialKey   guifg=cyan                            gui=none
+hi SpecialKey   guifg=#605958                         gui=none
 hi StatusLine   guifg=black          guibg=#c2bfa5    gui=bold
 hi StatusLineNC guifg=grey           guibg=gray40     gui=none
 hi Title        guifg=indianred                       gui=none
@@ -35,7 +35,7 @@ hi Visual       guifg=NONE           guibg=#373b41    gui=none
 hi WarningMsg   guifg=salmon                          gui=none
 hi Pmenu        guifg=white          guibg=#445599    gui=none
 hi PmenuSel     guifg=#445599        guibg=gray
-hi WildMenu     guifg=gray           guibg=gray17     gui=none
+hi WildMenu     guifg=#f0a0c0        guibg=#302028    gui=none
 hi MatchParen   guifg=cyan           guibg=NONE       gui=bold
 hi DiffAdd      guifg=black          guibg=wheat1
 hi DiffChange   guifg=black          guibg=skyblue1

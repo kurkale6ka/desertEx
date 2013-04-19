@@ -30,6 +30,8 @@ hi Search       guifg=gray80         guibg=#445599    gui=none
 hi SpecialKey   guifg=#605958                         gui=none
 hi StatusLine   guifg=black          guibg=#c2bfa5    gui=bold
 hi StatusLineNC guifg=grey           guibg=gray40     gui=none
+" hi StatusLine   guifg=#4d5057        guibg=#f0c674    gui=reverse
+" hi StatusLineNC guifg=#4d5057        guibg=#c5c8c6    gui=reverse
 hi Title        guifg=indianred                       gui=none
 hi Visual       guifg=NONE           guibg=#373b41    gui=none
 hi WarningMsg   guifg=salmon                          gui=none

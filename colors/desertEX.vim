@@ -12,7 +12,7 @@ if version > 580
 endif
 let g:colors_name="desertEX"
 
-hi Normal       guifg=#bebebe        guibg=grey15     gui=none
+hi Normal       guifg=#bebebe        guibg=#262626    gui=none
 
 " highlight groups
 hi Cursor       guifg=black          guibg=yellow     gui=none

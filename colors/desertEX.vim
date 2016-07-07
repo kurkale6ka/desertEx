@@ -1,62 +1,60 @@
-" Vim color file
-" Maintainer:   Mingbai <mbbill AT gmail DOT com>
-
 set background=dark
-if version > 580
-  " no guarantees for version 5.8 and below, but this makes it stop
-  " complaining
-  hi clear
-  if exists("syntax_on")
-    syntax reset
-  endif
+
+hi clear
+if exists("syntax_on")
+   syntax reset
 endif
+
 let g:colors_name="desertEX"
 
+" GUI
+" ---
 hi Normal       guifg=#bebebe        guibg=#262626    gui=none
 
 " highlight groups
-hi Cursor       guifg=black          guibg=yellow     gui=none
-hi ErrorMsg     guifg=white          guibg=red        gui=none
-hi VertSplit    guifg=gray40         guibg=gray40     gui=none
-hi Folded       guifg=DarkSlateGray3 guibg=grey30     gui=none
-hi FoldColumn   guifg=tan            guibg=grey30     gui=none
+hi Cursor       guifg=#000000        guibg=#ffff00    gui=none
+hi ErrorMsg     guifg=#ffffff        guibg=#ff0000    gui=none
+hi VertSplit    guifg=#666666        guibg=#666666    gui=none
+hi Folded       guifg=#79cdcd        guibg=#4d4d4d    gui=none
+hi FoldColumn   guifg=#d2b48c        guibg=#4d4d4d    gui=none
 hi IncSearch    guifg=#b0ffff        guibg=#2050d0
 hi LineNr       guifg=#605958        guibg=NONE       gui=none
-hi ModeMsg      guifg=SkyBlue                         gui=none
-hi MoreMsg      guifg=SeaGreen                        gui=none
-hi NonText      guifg=cyan                            gui=none
-hi Question     guifg=springgreen                     gui=none
-hi Search       guifg=gray80         guibg=#445599    gui=none
+hi ModeMsg      guifg=#87ceeb                         gui=none
+hi MoreMsg      guifg=#2e8b57                         gui=none
+hi NonText      guifg=#00ffff                         gui=none
+hi Question     guifg=#00ff7f                         gui=none
+hi Search       guifg=#cccccc        guibg=#445599    gui=none
 hi SpecialKey   guifg=#605958                         gui=none
-hi StatusLine   guifg=black          guibg=#c2bfa5    gui=bold
-hi StatusLineNC guifg=grey           guibg=gray40     gui=none
+hi StatusLine   guifg=#000000        guibg=#c2bfa5    gui=bold
+hi StatusLineNC guifg=grey           guibg=#666666    gui=none
 " hi StatusLine   guifg=#4d5057        guibg=#f0c674    gui=reverse
 " hi StatusLineNC guifg=#4d5057        guibg=#c5c8c6    gui=reverse
-hi Title        guifg=indianred                       gui=none
+hi Title        guifg=#cd5c5c                         gui=none
 hi Visual       guifg=NONE           guibg=#373b41    gui=none
-hi WarningMsg   guifg=salmon                          gui=none
-hi Pmenu        guifg=white          guibg=#445599    gui=none
-hi PmenuSel     guifg=#445599        guibg=gray
+hi WarningMsg   guifg=#fa8072                         gui=none
+hi Pmenu        guifg=#ffffff        guibg=#445599    gui=none
+hi PmenuSel     guifg=#445599        guibg=#bebebe
 hi WildMenu     guifg=#f0a0c0        guibg=#302028    gui=none
-hi MatchParen   guifg=cyan           guibg=NONE       gui=bold
-hi DiffAdd      guifg=black          guibg=wheat1
-hi DiffChange   guifg=black          guibg=skyblue1
-hi DiffText     guifg=black          guibg=hotpink1   gui=none
-hi DiffDelete   guibg=gray45         guifg=black      gui=none
+hi MatchParen   guifg=#00ffff        guibg=NONE       gui=bold
+hi DiffAdd      guifg=#000000        guibg=#ffe7ba
+hi DiffChange   guifg=#000000        guibg=#87ceff
+hi DiffText     guifg=#000000        guibg=#ff6eb4    gui=none
+hi DiffDelete   guibg=#737373        guifg=#000000    gui=none
 
 " syntax highlighting groups
-hi Comment      guifg=PaleGreen3                      gui=italic
-hi Constant     guifg=salmon                          gui=none
-hi Identifier   guifg=Skyblue                         gui=none
-hi Function     guifg=Skyblue                         gui=none
-hi Statement    guifg=lightgoldenrod2                 gui=none
-hi PreProc      guifg=PaleVioletRed2                  gui=none
-hi Type         guifg=tan1                            gui=none
-hi Special      guifg=aquamarine2                     gui=none
-hi Ignore       guifg=grey40                          gui=none
-hi Todo         guifg=orangered      guibg=yellow2    gui=none
+hi Comment      guifg=#7ccd7c                         gui=italic
+hi Constant     guifg=#fa8072                         gui=none
+hi Identifier   guifg=#87ceeb                         gui=none
+hi Function     guifg=#87ceeb                         gui=none
+hi Statement    guifg=#eedc82                         gui=none
+hi PreProc      guifg=#ee799f                         gui=none
+hi Type         guifg=#ffa54f                         gui=none
+hi Special      guifg=#76eec6                         gui=none
+hi Ignore       guifg=#666666                         gui=none
+hi Todo         guifg=#ff4500        guibg=#eeee00    gui=none
 
-" color terminal definitions
+" Terminal
+" --------
 hi SpecialKey   ctermfg=darkgreen
 hi NonText      ctermfg=darkblue                      cterm=bold
 hi Directory    ctermfg=darkcyan

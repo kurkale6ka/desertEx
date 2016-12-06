@@ -21,7 +21,7 @@ hi IncSearch    guifg=#b0ffff        guibg=#2050d0
 hi LineNr       guifg=#605958        guibg=NONE       gui=none
 hi ModeMsg      guifg=#87ceeb                         gui=none
 hi MoreMsg      guifg=#2e8b57                         gui=none
-hi NonText      guifg=#00ffff                         gui=none
+hi NonText      guifg=#3465A4                         gui=none
 hi Question     guifg=#00ff7f                         gui=none
 hi Search       guifg=#cccccc        guibg=#445599    gui=none
 hi SpecialKey   guifg=#605958                         gui=none

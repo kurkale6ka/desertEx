@@ -13,6 +13,7 @@ hi Title        guifg=#cd5c5c                   gui=NONE   cterm=none
 hi LineNr       guifg=#605958   guibg=NONE      gui=NONE   cterm=none
 hi Cursor       guifg=#000000   guibg=#ffff00   gui=NONE   cterm=none
 hi CursorLine                   guibg=#333333              cterm=none
+hi CursorLineNr                                 gui=NONE   cterm=none
 hi Visual       guifg=NONE      guibg=#373b41   gui=NONE   cterm=none
 hi VertSplit    guifg=#666666   guibg=#666666   gui=NONE   cterm=none
 hi SpecialKey   guifg=#605958                   gui=NONE   cterm=none
@@ -75,56 +76,58 @@ hi User4   guifg=#ff7575   guibg=#4d5057   gui=NONE   cterm=none
 hi User5   guifg=#ffab60   guibg=#4d5057   gui=NONE   cterm=none
 
 "" TUI
-" hi Title        ctermfg=5
-" hi LineNr       ctermfg=3
-" hi Visual                                           cterm=reverse
-" hi VertSplit                                        cterm=reverse
-" hi SpecialKey   ctermfg=darkgreen
+if $TERM == 'linux'
+   hi Title        ctermfg=green
+   hi LineNr       ctermfg=darkgrey
+   " hi Visual
+   " hi VertSplit
+   hi SpecialKey   ctermfg=darkgreen
 
-" " fold
-" hi Folded       ctermfg=darkgrey    ctermbg=NONE
-" hi FoldColumn   ctermfg=darkgrey    ctermbg=NONE
+   " fold
+   hi Folded       ctermfg=darkgrey   ctermbg=NONE
+   hi FoldColumn   ctermfg=darkgrey   ctermbg=NONE
 
-" " search
-" hi Search       ctermfg=grey        ctermbg=blue    cterm=NONE
-" hi IncSearch    ctermfg=yellow      ctermbg=green   cterm=NONE
+   " search
+   hi Search      ctermfg=grey     ctermbg=blue
+   hi IncSearch   ctermfg=yellow   ctermbg=green
 
-" " messages
-" hi ErrorMsg     ctermfg=7           ctermbg=1       cterm=bold
-" hi ModeMsg      ctermfg=brown                       cterm=NONE
-" hi MoreMsg      ctermfg=darkgreen
-" hi WarningMsg   ctermfg=1
-" hi Question     ctermfg=green
+   " messages
+   hi ErrorMsg     ctermfg=yellow      ctermbg=darkred
+   hi ModeMsg      ctermfg=brown
+   hi MoreMsg      ctermfg=darkgreen
+   hi WarningMsg   ctermfg=darkred
+   hi Question     ctermfg=green
 
-" hi WildMenu     ctermfg=0           ctermbg=3
+   hi WildMenu   ctermfg=black   ctermbg=brown
 
-" " diff
-" hi DiffAdd                          ctermbg=4
-" hi DiffChange                       ctermbg=5
-" hi DiffText                         ctermbg=1       cterm=bold
-" hi DiffDelete   ctermfg=4           ctermbg=6       cterm=bold
+   " diff
+   hi DiffAdd                         ctermbg=darkblue
+   hi DiffChange                      ctermbg=darkmagenta
+   hi DiffText                        ctermbg=darkred
+   hi DiffDelete   ctermfg=darkblue   ctermbg=darkcyan
 
-" " code
-" hi Comment      ctermfg=darkcyan
-" hi Constant     ctermfg=brown
-" hi Identifier   ctermfg=6
-" hi Statement    ctermfg=3
-" hi PreProc      ctermfg=5
-" hi Type         ctermfg=2
-" hi Special      ctermfg=5
-" hi Ignore       ctermfg=darkgrey
+   " code
+   hi Comment      ctermfg=green
+   hi Constant     ctermfg=red
+   hi Identifier   ctermfg=blue
+   hi Statement    ctermfg=brown
+   hi PreProc      ctermfg=darkmagenta
+   hi Type         ctermfg=darkgreen
+   hi Special      ctermfg=darkmagenta
+   hi Ignore       ctermfg=darkgrey
 
-" " EOF tildas (~)
-" hi NonText      ctermfg=darkblue                    cterm=bold
+   " EOF tildas (~)
+   hi NonText   ctermfg=darkblue
 
-" " status line
-" hi StatusLine                                       cterm=bold,reverse
-" hi StatusLineNC                                     cterm=reverse
+   " status line
+   " hi StatusLine
+   " hi StatusLineNC
 
-" " terminal only
-" hi Underlined   ctermfg=5                           cterm=underline
-" hi Error        ctermfg=7           ctermbg=1       cterm=bold
-" hi Directory    ctermfg=darkcyan
-" hi VisualNOS                                        cterm=bold,underline
+   " terminal only
+   hi Underlined   ctermfg=darkmagenta
+   hi Error        ctermfg=yellow        ctermbg=darkred
+   hi Directory    ctermfg=darkcyan
+   " hi VisualNOS
+endif
 
 " vim: fde=getline(v\:lnum)=~'^\\s*""'?'>'.(len(matchstr(getline(v\:lnum),'"""*'))-1)\:'='

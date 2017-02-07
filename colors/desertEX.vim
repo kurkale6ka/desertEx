@@ -66,7 +66,7 @@ hi StatusLineNC   guifg=#bebebe   guibg=#787878   gui=NONE   cterm=none
 
 " number of lines and column
 hi User1   guifg=#ffd75f   guibg=#4d5057   gui=NONE   cterm=none
-" ❬
+" ❬ and ❭
 hi User2   guifg=#121212   guibg=#4d5057   gui=NONE   cterm=none
 " file name
 hi User3   guifg=#86bcff   guibg=#4d5057   gui=NONE   cterm=none
@@ -77,19 +77,24 @@ hi User5   guifg=#ffab60   guibg=#4d5057   gui=NONE   cterm=none
 
 "" TUI
 if $TERM == 'linux'
-   hi Title        ctermfg=green
-   hi LineNr       ctermfg=darkgrey
+   hi Normal       ctermfg=white    ctermbg=black
+   hi Title        ctermfg=red
+   hi LineNr       ctermfg=darkgrey ctermbg=NONE
+   " hi Cursor       guifg=#000000   guibg=#ffff00
+   " hi CursorLine                   guibg=#333333
+   hi CursorLineNr ctermfg=yellow
    " hi Visual
    " hi VertSplit
-   hi SpecialKey   ctermfg=darkgreen
+   hi SpecialKey   ctermfg=darkgrey
+   " hi MatchParen   guifg=#00ffff   guibg=NONE      gui=bold
 
    " fold
    hi Folded       ctermfg=darkgrey   ctermbg=NONE
    hi FoldColumn   ctermfg=darkgrey   ctermbg=NONE
 
    " search
-   hi Search      ctermfg=grey     ctermbg=blue
-   hi IncSearch   ctermfg=yellow   ctermbg=green
+   hi Search      ctermfg=grey   ctermbg=blue
+   hi IncSearch   ctermfg=blue   ctermbg=cyan
 
    " messages
    hi ErrorMsg     ctermfg=yellow      ctermbg=darkred
@@ -98,7 +103,9 @@ if $TERM == 'linux'
    hi WarningMsg   ctermfg=darkred
    hi Question     ctermfg=green
 
-   hi WildMenu   ctermfg=black   ctermbg=brown
+   " hi Pmenu        guifg=#ffffff   guibg=#445599
+   " hi PmenuSel     guifg=#445599   guibg=#bebebe
+   hi WildMenu   ctermfg=magenta   ctermbg=NONE
 
    " diff
    hi DiffAdd                         ctermbg=darkblue
@@ -110,24 +117,32 @@ if $TERM == 'linux'
    hi Comment      ctermfg=green
    hi Constant     ctermfg=red
    hi Identifier   ctermfg=blue
-   hi Statement    ctermfg=brown
-   hi PreProc      ctermfg=darkmagenta
+   " hi Function     guifg=#87ceeb
+   hi Statement    ctermfg=yellow
+   hi PreProc      ctermfg=magenta
    hi Type         ctermfg=darkgreen
-   hi Special      ctermfg=darkmagenta
+   hi Special      ctermfg=cyan
    hi Ignore       ctermfg=darkgrey
+   " hi Todo         guifg=#ff4500   guibg=#eeee00
 
    " EOF tildas (~)
    hi NonText   ctermfg=darkblue
 
    " status line
-   " hi StatusLine
-   " hi StatusLineNC
+   hi StatusLine     ctermfg=white   ctermbg=lightgrey
+   hi StatusLineNC   ctermfg=white   ctermbg=white
+
+   hi User1   ctermfg=yellow   ctermbg=lightgrey
+   hi User2   ctermfg=black    ctermbg=lightgrey
+   hi User3   ctermfg=blue     ctermbg=lightgrey
+   hi User4   ctermfg=red      ctermbg=lightgrey
+   hi User5   ctermfg=brown    ctermbg=lightgrey
 
    " terminal only
    hi Underlined   ctermfg=darkmagenta
    hi Error        ctermfg=yellow        ctermbg=darkred
    hi Directory    ctermfg=darkcyan
-   " hi VisualNOS
+   " hi VisualNOS <- unknown
 endif
 
 " vim: fde=getline(v\:lnum)=~'^\\s*""'?'>'.(len(matchstr(getline(v\:lnum),'"""*'))-1)\:'='

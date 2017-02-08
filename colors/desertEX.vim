@@ -8,24 +8,26 @@ endif
 let g:colors_name='desertEX'
 
 "" GUI
-hi Normal       guifg=#bebebe   guibg=#262626   gui=NONE   cterm=none
-hi Title        guifg=#cd5c5c                   gui=NONE   cterm=none
-hi LineNr       guifg=#605958   guibg=NONE      gui=NONE   cterm=none
-hi Cursor       guifg=#000000   guibg=#ffff00   gui=NONE   cterm=none
-hi CursorLine                   guibg=#333333              cterm=none
-hi CursorLineNr                                 gui=NONE   cterm=none
-hi Visual       guifg=NONE      guibg=#373b41   gui=NONE   cterm=none
-hi VertSplit    guifg=#666666   guibg=#666666   gui=NONE   cterm=none
-hi SpecialKey   guifg=#605958                   gui=NONE   cterm=none
-hi MatchParen   guifg=#00ffff   guibg=NONE      gui=bold   cterm=none
+hi Normal         guifg=#bebebe   guibg=#262626   gui=NONE   cterm=none
+hi Title          guifg=#cd5c5c                   gui=NONE   cterm=none
+hi LineNr         guifg=#605958   guibg=NONE      gui=NONE   cterm=none
+" hi Cursor         guifg=#000000   guibg=#ffff00   gui=NONE   cterm=none " TODO
+" TODO: not display in diff mode
+hi CursorLine                     guibg=#333333              cterm=none
+hi CursorLineNr                                   gui=NONE   cterm=none
+" hi ColorColumn    guifg=NONE      guibg=darkred   gui=NONE   cterm=none " TODO
+hi Visual         guifg=NONE      guibg=#373b41   gui=NONE   cterm=none
+hi VertSplit      guifg=#666666   guibg=#666666   gui=NONE   cterm=none
+hi SpecialKey     guifg=#605958                   gui=NONE   cterm=none
+hi MatchParen     guifg=#00ffff   guibg=NONE      gui=bold   cterm=none
 
 " fold
 hi Folded       guifg=#999999   guibg=#2b2e36   gui=NONE   cterm=none
 hi FoldColumn   guifg=#d2b48c   guibg=#4d4d4d   gui=NONE   cterm=none
 
 " search
-hi Search       guifg=#cccccc   guibg=#445599   gui=NONE   cterm=none
-hi IncSearch    guifg=#b0ffff   guibg=#2050d0              cterm=none
+hi Search      guifg=#cccccc   guibg=#445599   gui=NONE   cterm=none
+hi IncSearch   guifg=#b0ffff   guibg=#2050d0              cterm=none
 
 " messages
 hi ErrorMsg     guifg=#ffffff   guibg=#ff0000   gui=NONE   cterm=none
@@ -35,15 +37,15 @@ hi WarningMsg   guifg=#fa8072                   gui=NONE   cterm=none
 hi Question     guifg=#00ff7f                   gui=NONE   cterm=none
 
 " menus
-hi Pmenu        guifg=#ffffff   guibg=#445599   gui=NONE   cterm=none
-hi PmenuSel     guifg=#445599   guibg=#bebebe              cterm=none
-hi WildMenu     guifg=#f0a0c0   guibg=#302028   gui=NONE   cterm=none
+hi Pmenu      guifg=#ffffff   guibg=#445599   gui=NONE   cterm=none
+hi PmenuSel   guifg=#445599   guibg=#bebebe              cterm=none
+hi WildMenu   guifg=#f0a0c0   guibg=#302028   gui=NONE   cterm=none
 
 " diff
 hi DiffAdd      guifg=#000000   guibg=#ffe7ba              cterm=none
+hi DiffDelete   guifg=#000000   guibg=#737373   gui=NONE   cterm=none
 hi DiffChange   guifg=#000000   guibg=#87ceff              cterm=none
 hi DiffText     guifg=#000000   guibg=#ff6eb4   gui=NONE   cterm=none
-hi DiffDelete   guifg=#000000   guibg=#737373   gui=NONE   cterm=none
 
 " code
 hi Comment      guifg=#7ccd7c                   gui=italic   cterm=none
@@ -58,7 +60,7 @@ hi Ignore       guifg=#666666                   gui=NONE     cterm=none
 hi Todo         guifg=#ff4500   guibg=#eeee00   gui=NONE     cterm=none
 
 " EOF tildas (~)
-hi NonText      guifg=#3465A4                   gui=NONE     cterm=none
+hi NonText   guifg=#3465A4   gui=NONE   cterm=none
 
 " status line
 hi StatusLine     guifg=#bebebe   guibg=#4d5057   gui=NONE   cterm=none
@@ -75,18 +77,23 @@ hi User4   guifg=#ff7575   guibg=#4d5057   gui=NONE   cterm=none
 " filetype
 hi User5   guifg=#ffab60   guibg=#4d5057   gui=NONE   cterm=none
 
+" hi Underlined   guifg=darkmagenta
+" hi Error        guifg=white         guibg=red
+" hi Directory    guifg=blue
+
 "" TUI
 if $TERM == 'linux'
-   hi Normal       ctermfg=white    ctermbg=black
-   hi Title        ctermfg=red
-   hi LineNr       ctermfg=darkgrey ctermbg=NONE
-   " hi Cursor       guifg=#000000   guibg=#ffff00
-   " hi CursorLine                   guibg=#333333
-   hi CursorLineNr ctermfg=yellow
-   " hi Visual
-   " hi VertSplit
-   hi SpecialKey   ctermfg=darkgrey
-   " hi MatchParen   guifg=#00ffff   guibg=NONE      gui=bold
+   hi Normal         ctermfg=white      ctermbg=black
+   hi Title          ctermfg=red
+   hi LineNr         ctermfg=darkgrey   ctermbg=NONE
+   " hi Cursor         ctermfg=black      ctermbg=yellow
+   hi CursorLine                        ctermbg=NONE
+   hi CursorLineNr   ctermfg=yellow
+   hi ColorColumn    ctermfg=NONE       ctermbg=red
+   hi Visual         ctermfg=NONE       ctermbg=cyan
+   hi VertSplit      ctermfg=NONE       ctermbg=lightgrey
+   hi SpecialKey     ctermfg=darkgrey
+   hi MatchParen     ctermfg=NONE       ctermbg=cyan        cterm=bold
 
    " fold
    hi Folded       ctermfg=darkgrey   ctermbg=NONE
@@ -97,33 +104,33 @@ if $TERM == 'linux'
    hi IncSearch   ctermfg=blue   ctermbg=cyan
 
    " messages
-   hi ErrorMsg     ctermfg=yellow      ctermbg=darkred
-   hi ModeMsg      ctermfg=brown
+   hi ErrorMsg     ctermfg=white       ctermbg=red
+   hi ModeMsg      ctermfg=blue
    hi MoreMsg      ctermfg=darkgreen
-   hi WarningMsg   ctermfg=darkred
+   hi WarningMsg   ctermfg=red
    hi Question     ctermfg=green
 
-   " hi Pmenu        guifg=#ffffff   guibg=#445599
-   " hi PmenuSel     guifg=#445599   guibg=#bebebe
-   hi WildMenu   ctermfg=magenta   ctermbg=NONE
+   hi Pmenu      ctermfg=white         ctermbg=darkmagenta
+   hi PmenuSel   ctermfg=darkmagenta   ctermbg=white
+   hi WildMenu   ctermfg=magenta       ctermbg=NONE
 
    " diff
-   hi DiffAdd                         ctermbg=darkblue
-   hi DiffChange                      ctermbg=darkmagenta
-   hi DiffText                        ctermbg=darkred
-   hi DiffDelete   ctermfg=darkblue   ctermbg=darkcyan
+   hi DiffAdd      ctermfg=black   ctermbg=yellow
+   hi DiffDelete   ctermfg=black   ctermbg=lightgrey
+   hi DiffChange   ctermfg=black   ctermbg=blue
+   hi DiffText     ctermfg=black   ctermbg=red
 
    " code
    hi Comment      ctermfg=green
    hi Constant     ctermfg=red
    hi Identifier   ctermfg=blue
-   " hi Function     guifg=#87ceeb
+   hi Function     ctermfg=blue
    hi Statement    ctermfg=yellow
    hi PreProc      ctermfg=magenta
    hi Type         ctermfg=darkgreen
    hi Special      ctermfg=cyan
    hi Ignore       ctermfg=darkgrey
-   " hi Todo         guifg=#ff4500   guibg=#eeee00
+   hi Todo         ctermfg=black       ctermbg=yellow
 
    " EOF tildas (~)
    hi NonText   ctermfg=darkblue
@@ -138,11 +145,9 @@ if $TERM == 'linux'
    hi User4   ctermfg=red      ctermbg=lightgrey
    hi User5   ctermfg=brown    ctermbg=lightgrey
 
-   " terminal only
    hi Underlined   ctermfg=darkmagenta
-   hi Error        ctermfg=yellow        ctermbg=darkred
-   hi Directory    ctermfg=darkcyan
-   " hi VisualNOS <- unknown
+   hi Error        ctermfg=white         ctermbg=red
+   hi Directory    ctermfg=blue
 endif
 
 " vim: fde=getline(v\:lnum)=~'^\\s*""'?'>'.(len(matchstr(getline(v\:lnum),'"""*'))-1)\:'='

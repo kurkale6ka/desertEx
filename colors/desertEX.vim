@@ -18,6 +18,7 @@ hi CursorLineNr                                   gui=NONE   cterm=none
 " hi ColorColumn    guifg=NONE      guibg=darkred   gui=NONE   cterm=none " TODO
 hi Visual         guifg=NONE      guibg=#373b41   gui=NONE   cterm=none
 hi VertSplit      guifg=#666666   guibg=#666666   gui=NONE   cterm=none
+" nbsp, tab and trail (TODO: fix wrong blue color)
 hi SpecialKey     guifg=#605958                   gui=NONE   cterm=none
 hi MatchParen     guifg=#00ffff   guibg=NONE      gui=bold   cterm=none
 
@@ -82,6 +83,8 @@ hi User5   guifg=#ffab60   guibg=#4d5057   gui=NONE   cterm=none
 " hi Directory    guifg=blue
 
 "" TUI
+" Only really needed for the kernel console as otherwise the GUI colors will
+" be used because of 'termguicolors
 if $TERM == 'linux'
    hi Normal         ctermfg=white      ctermbg=black
    hi Title          ctermfg=red
@@ -92,6 +95,7 @@ if $TERM == 'linux'
    hi ColorColumn    ctermfg=NONE       ctermbg=red
    hi Visual         ctermfg=NONE       ctermbg=cyan
    hi VertSplit      ctermfg=NONE       ctermbg=lightgrey
+   " nbsp, tab and trail
    hi SpecialKey     ctermfg=darkgrey
    hi MatchParen     ctermfg=NONE       ctermbg=cyan        cterm=bold
 

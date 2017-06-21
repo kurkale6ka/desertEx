@@ -7,6 +7,8 @@ endif
 
 let g:colors_name='desertEX'
 
+" :h highlight-groups
+
 "" GUI
 hi Normal         guifg=#bebebe   guibg=#262626   gui=NONE   cterm=none
 hi Title          guifg=#cd5c5c                   gui=NONE   cterm=none
@@ -18,8 +20,10 @@ hi CursorLineNr                                   gui=NONE   cterm=none
 " hi ColorColumn    guifg=NONE      guibg=darkred   gui=NONE   cterm=none " TODO
 hi Visual         guifg=NONE      guibg=#373b41   gui=NONE   cterm=none
 hi VertSplit      guifg=#666666   guibg=#666666   gui=NONE   cterm=none
-" nbsp, tab and trail (TODO: fix wrong blue color)
+" unprintable characters
 hi SpecialKey     guifg=#605958                   gui=NONE   cterm=none
+" nbsp, tab and trail
+hi Whitespace     guifg=#605958                   gui=NONE   cterm=none
 hi MatchParen     guifg=#00ffff   guibg=NONE      gui=bold   cterm=none
 
 " fold
@@ -80,7 +84,7 @@ hi User5   guifg=#ffab60   guibg=#4d5057   gui=NONE   cterm=none
 
 " hi Underlined   guifg=darkmagenta
 " hi Error        guifg=white         guibg=red
-" hi Directory    guifg=blue
+hi Directory      guifg=#6871ff
 
 "" TUI
 " Only really needed for the kernel console as otherwise the GUI colors will
